@@ -44,8 +44,9 @@ Next, we ran `merqury`'s best *k*-mer size script to chose a value for an altern
 $MERQURY/best_k.sh 1327358016
 ```
 
-We used the suggested output (rounded down to 20) to run an alternate assembly with `hifiasm`: 
+We used the suggested output (rounded up to an odd value of `-k 21`) to run an alternate assembly with `hifiasm`: 
 
 ```
-hifiasm -o n_columbiana_k20.asm -t 48 /home/k14m234/nucifraga/data/pacbio/XDOVE_20231115_R84050_PL4953-001_1-B01.hifi_reads.default.fastq.gz
+hifiasm -o n_columbiana_k20.asm -k 21 -t 48 
+/home/k14m234/nucifraga/data/pacbio/XDOVE_20231115_R84050_PL4953-001_1-B01.hifi_reads.default.fastq.gz
 ```
