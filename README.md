@@ -5,7 +5,7 @@
 
 epository for code and methods associated with *N. columbiana* genome assembly. 
 
-`qc_output/`: files output from quality control programs (e.g. `merqury`, `quast`)
+`qc_output/`: folders with output from quality control programs (e.g. `merqury`, `quast`)
 
 `sbatch': slurm scripts from the Tempest cluster
 
@@ -50,3 +50,62 @@ We used the suggested output (rounded up to an odd value of `-k 21`) to run an a
 hifiasm -o n_columbiana_k20.asm -k 21 -t 48 
 /home/k14m234/nucifraga/data/pacbio/XDOVE_20231115_R84050_PL4953-001_1-B01.hifi_reads.default.fastq.gz
 ```
+
+## Results
+
+`Hifiasm` appears to have produced a larger and more contiguous assembly with default values. Here is a summary from `QUAST`:
+
+| Assembly   				 | n_columbiana.asm.bp.p_ctg |
+| ---------------------------| ------------------------- |
+| # contigs (>= 0 bp)        | 1284                      |
+| # contigs (>= 1000 bp)     | 1284                      |
+| # contigs (>= 5000 bp)     | 1284                      |
+| # contigs (>= 10000 bp)    | 1284                      |
+| # contigs (>= 25000 bp)    | 1125                      |
+| # contigs (>= 50000 bp)    | 562                       |
+| Total length (>= 0 bp)     | 1327358016                |
+| Total length (>= 1000 bp)  | 1327358016                |
+| Total length (>= 5000 bp)  | 1327358016                |
+| Total length (>= 10000 bp) | 1327358016                |
+| Total length (>= 25000 bp) | 1323965263                |
+| Total length (>= 50000 bp) | 1304414718                |
+| # contigs                  | 1284                      |
+| Largest contig             | 62260949                  |
+| Total length               | 1327358016                |
+| GC (%)                     | 44.35                     |
+| N50                        | 21958091                  |
+| N90                        | 1526686                   |
+| auN                        | 23761111.7                |
+| L50                        | 19                        |
+| L90                        | 116                       |
+| # N's per 100 kbp          | 0.00                      |
+
+Compare that to results from an assembly with `-k 21` (as suggested by `merqury`):
+
+|Assembly                    |n_columbiana_k21.asm.bp.p_ctg |
+|----------------------------|------------------------------|
+|# contigs (>= 0 bp)         |1318                          |
+|# contigs (>= 1000 bp)      |1318                          |
+|# contigs (>= 5000 bp)      |1318                          |
+|# contigs (>= 10000 bp)     |1318                          |
+|# contigs (>= 25000 bp)     |1171                          |
+|# contigs (>= 50000 bp)     |609                           |
+|Total length (>= 0 bp)      |1321622999                    |
+|Total length (>= 1000 bp)   |1321622999                    |
+|Total length (>= 5000 bp)   |1321622999                    |
+|Total length (>= 10000 bp)  |1321622999                    |
+|Total length (>= 25000 bp)  |1318500872                    |
+|Total length (>= 50000 bp)  |1299103760                    |
+|# contigs                   |1318                          |
+|Largest contig              |62628041                      |
+|Total length                |1321622999                    |
+|GC (%)                      |44.34                         |
+|N50                         |19279672                      |
+|N90                         |1435525                       |
+|auN                         |24336645.4                    |
+|L50                         |19                            |
+|L90                         |121                           |
+|# N's per 100 kbp           |0.00    						|
+
+(This assembly also took much longer to run.)
+

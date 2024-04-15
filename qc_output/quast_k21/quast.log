@@ -1,0 +1,62 @@
+/home/k14m234/.conda/envs/quast/bin/quast n_columbiana_k21.asm.bp.p_ctg.fa
+
+Version: 5.2.0
+
+System information:
+  OS: Linux-4.18.0-513.9.1.el8_9.x86_64-x86_64-with-glibc2.28 (linux_64)
+  Python version: 3.10.8
+  CPUs number: 256
+
+Started: 2024-04-15 15:32:33
+
+Logging to /home/k14m234/nucifraga/jobs/quast_results/results_2024_04_15_15_32_33/quast.log
+NOTICE: Maximum number of threads is set to 64 (use --threads option to set it manually)
+
+CWD: /home/k14m234/nucifraga/jobs
+Main parameters: 
+  MODE: default, threads: 64, min contig length: 500, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Contigs:
+  Pre-processing...
+  n_columbiana_k21.asm.bp.p_ctg.fa ==> n_columbiana_k21.asm.bp.p_ctg
+
+2024-04-15 15:33:04
+Running Basic statistics processor...
+  Contig files: 
+    n_columbiana_k21.asm.bp.p_ctg
+  Calculating N50 and L50...
+    n_columbiana_k21.asm.bp.p_ctg, N50 = 19279672, L50 = 19, auN = 24336645.4, Total length = 1321622999, GC % = 44.34, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /home/k14m234/nucifraga/jobs/quast_results/results_2024_04_15_15_32_33/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/k14m234/nucifraga/jobs/quast_results/results_2024_04_15_15_32_33/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/k14m234/nucifraga/jobs/quast_results/results_2024_04_15_15_32_33/basic_stats/GC_content_plot.pdf
+  Drawing n_columbiana_k21.asm.bp.p_ctg GC content plot...
+    saved to /home/k14m234/nucifraga/jobs/quast_results/results_2024_04_15_15_32_33/basic_stats/n_columbiana_k21.asm.bp.p_ctg_GC_content_plot.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2024-04-15 15:33:59
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating PDF with all tables and plots...
+  2 of 2: Creating Icarus viewers...
+Done
+
+2024-04-15 15:34:10
+RESULTS:
+  Text versions of total report are saved to /home/k14m234/nucifraga/jobs/quast_results/results_2024_04_15_15_32_33/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/k14m234/nucifraga/jobs/quast_results/results_2024_04_15_15_32_33/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/k14m234/nucifraga/jobs/quast_results/results_2024_04_15_15_32_33/report.html
+  PDF version (tables and plots) is saved to /home/k14m234/nucifraga/jobs/quast_results/results_2024_04_15_15_32_33/report.pdf
+  Icarus (contig browser) is saved to /home/k14m234/nucifraga/jobs/quast_results/results_2024_04_15_15_32_33/icarus.html
+  Log is saved to /home/k14m234/nucifraga/jobs/quast_results/results_2024_04_15_15_32_33/quast.log
+
+Finished: 2024-04-15 15:34:10
+Elapsed time: 0:01:36.786726
+NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

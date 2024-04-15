@@ -1,0 +1,23 @@
+Assembly	n_columbiana_k21.asm.bp.p_ctg
+# contigs (>= 0 bp)	1318
+# contigs (>= 1000 bp)	1318
+# contigs (>= 5000 bp)	1318
+# contigs (>= 10000 bp)	1318
+# contigs (>= 25000 bp)	1171
+# contigs (>= 50000 bp)	609
+Total length (>= 0 bp)	1321622999
+Total length (>= 1000 bp)	1321622999
+Total length (>= 5000 bp)	1321622999
+Total length (>= 10000 bp)	1321622999
+Total length (>= 25000 bp)	1318500872
+Total length (>= 50000 bp)	1299103760
+# contigs	1318
+Largest contig	62628041
+Total length	1321622999
+GC (%)	44.34
+N50	19279672
+N90	1435525
+auN	24336645.4
+L50	19
+L90	121
+# N's per 100 kbp	0.00
